@@ -29,6 +29,7 @@
 
 #import <CoreData/CoreData.h>
 #import <Mantle/Mantle.h>
+#import <MTLManagedObjectAdapter/MTLManagedObjectAdapter.h>
 
 @interface OVCModelResponseSerializer ()
 

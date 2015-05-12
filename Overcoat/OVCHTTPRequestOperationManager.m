@@ -25,6 +25,8 @@
 #import "OVCModelResponseSerializer.h"
 #import "OVCURLMatcher.h"
 
+#import <MTLManagedObjectAdapter/MTLManagedObjectAdapter.h>
+
 @interface OVCHTTPRequestOperationManager ()
 
 @property (strong, nonatomic) NSManagedObjectContext *backgroundContext;

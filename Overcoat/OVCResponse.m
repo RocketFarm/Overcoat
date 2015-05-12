@@ -66,9 +66,11 @@
             NSValueTransformer *valueTransformer = nil;
             
             if ([result isKindOfClass:[NSDictionary class]]) {
-                valueTransformer = [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:resultClass];
+				valueTransformer = [MTLJSONAdapter dictionaryTransformerWithModelClass:resultClass];
+				
+				
             } else if ([result isKindOfClass:[NSArray class]]) {
-                valueTransformer = [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:resultClass];
+				valueTransformer = [MTLJSONAdapter arrayTransformerWithModelClass:resultClass];
             }
             
             result = [valueTransformer transformedValue:result];
